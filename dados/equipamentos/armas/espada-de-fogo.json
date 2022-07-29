@@ -1,0 +1,8 @@
+{
+    "hp": 0,
+    "atk": 5,
+    "magia": 2,
+    "def": 0,
+    "speed": 2,
+    "efeito": "queimadura"
+}

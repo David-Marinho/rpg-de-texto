@@ -1,7 +1,8 @@
 {
     "atendente": "nome",
     "itens": {
-        "espada longa": 100,
+        "espada normal": 100,
+        "espada grande": 150,
         "armadura leve": 120
     }
 }

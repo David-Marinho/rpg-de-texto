@@ -1,0 +1,28 @@
+{
+    "normal-form": {
+        "hp": -2,
+        "atk": 15,
+        "magia": 0,
+        "def": -1,
+        "speed": 10,
+        "efeito": "form-change"
+    },
+
+    "light-form": {
+        "hp": -2,
+        "atk": 10,
+        "magia": 15,
+        "def": -1,
+        "speed": 8,
+        "efeito": "magic boost"
+    },
+
+    "dark-form": {
+        "hp": -4,
+        "atk": 18,
+        "magia": 2,
+        "def": -5,
+        "speed": 10,
+        "efeito": "berserker"
+    }
+}
