@@ -4,15 +4,15 @@ from json import load
 
 
 class armas:
-    def __init__(self, hp, atk, mag, defesa, speed):
+    def __init__(self, hp, atk, mag, defesa, speed, efeito):
         self.hp = hp
         self.atk = atk
         self.mag = mag
         self.defesa = defesa
         self.speed = speed
-        self.efeito = None
+        self.efeito = efeito
 
-    def definir_efeito(self, nome_efeito):
+    """def definir_efeito(self, nome_efeito):
         path = rf'{os.getcwd()}\dados\efeitos'
         for file in os.listdir(path):
             print()
@@ -22,4 +22,4 @@ class armas:
                 break
 
             else:
-                pass
+                pass"""
