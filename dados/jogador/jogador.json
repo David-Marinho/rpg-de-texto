@@ -1,0 +1,13 @@
+{
+  "nome": "sla",
+  "def": "1",
+
+  "lista_magia": [
+    {
+      "nome": "bola de fogo", "dano": 20
+    },
+    {
+      "nome": "nevasca", "dano": 50
+    }
+  ]
+}

@@ -1,15 +1,12 @@
-class batalha:
-    def __init__(self, lista_personagens):
-        self.lista_personagens = lista_personagens
+def ordem(personagens: dict()):
+    return sorted(personagens.key(), reverse=True)
 
-    def start(self):
-        self.lista_personagens = sorted(self.lista_personagens, key=self.lista_personagens.get)
+def turno(personagens: list()):
+    for classe in personagens:
+        prioridade[classe] = classe.speed
+    personagens = ordem(prioridade)
 
-    def turno(self):
-        while True:
-            for personagem in self.lista_personagens:
-                if personagem == 'pj':
-                    escolha = input('escolha sua açao')
+    while True:
+        
 
-                else:
-                    """programar inteligencia artificial"""
+    
