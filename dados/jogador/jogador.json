@@ -1,7 +1,13 @@
 {
   "nome": "sla",
-  "def": "1",
-
+  "hp": 10,
+  "atk": 5,
+  "def": 4,
+  "mag": 5,
+  "def_mag": 4,
+  "speed": 3,
+  "exp": 0,
+  "lv": 5,
   "lista_magia": [
     {
       "nome": "bola de fogo", "dano": 20
@@ -9,5 +15,11 @@
     {
       "nome": "nevasca", "dano": 50
     }
+  ],
+  "inventario": [
+    {"nome": "poçao", "quant": 2},
+    {"nome": "ether", "quant": 2},
+    {"nome": "espada longa", "quant": 2},
+    {"nome": "armadura de couro", "quant": 2}
   ]
 }

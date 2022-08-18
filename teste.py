@@ -7,3 +7,5 @@ pessoas = [
 for i in pessoas:
     print(f'{i["nome"]} {i["idade"]}')
 
+print(pessoas[0]['idade'])
+
