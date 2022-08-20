@@ -8,7 +8,7 @@
   "speed": 3,
   "exp": 0,
   "lv": 5,
-  "lista_magia": [
+  "magia": [
     {
       "nome": "bola de fogo", "dano": 20
     },

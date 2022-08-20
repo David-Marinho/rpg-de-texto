@@ -1,11 +1,18 @@
-pessoas = [
-    {'nome': 'joao', 'idade': 20},
-    {'nome': 'paula', 'idade': 22},
-    {'nome': 'pedro', 'idade': 15}
-]
+from json import load
+from jogador import Jogador
+from inimigos import Inimigo
 
-for i in pessoas:
-    print(f'{i["nome"]} {i["idade"]}')
+jogador = load(open('dados/jogador/jogador.json', 'r'))
+inimigo = load(open('dados/monstros/generico.json', 'r'))
 
-print(pessoas[0]['idade'])
+jogador = Jogador(jogador['nome'], jogador['hp'], jogador['atk'], jogador['def'], jogador['mag'], jogador['def_mag'],
+                  jogador['speed'], jogador['exp'], jogador['lv'], jogador['magia'], jogador['inventario'])
+
+inimigo = Inimigo(inimigo['nome'], inimigo['hp'], inimigo['atk'], inimigo['def'], inimigo['mag'], inimigo['def_mag'],
+                  inimigo['speed'], inimigo['lv'], inimigo['magia'], inimigo['desc'])
+
+
+
+
+
 
