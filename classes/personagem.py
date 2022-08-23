@@ -16,8 +16,9 @@ class Personagem:
         if self.hp == 0:
             self.vivo = False
 
-    def atacar(self, inimigo_def):
-        return self.atk - inimigo_def
+    @staticmethod
+    def atacar(atk, inimigo_def):
+        return atk - inimigo_def
 
     def defender(self):
         self.defendendo = True
