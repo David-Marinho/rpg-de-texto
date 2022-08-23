@@ -1,18 +1,18 @@
+import json
 from json import load
 from jogador import Jogador
 from inimigos import Inimigo
 
-jogador = load(open('dados/jogador/jogador.json', 'r'))
+dados = load(open('dados/jogador/jogador.json', 'r'))
 inimigo = load(open('dados/monstros/generico.json', 'r'))
 
-jogador = Jogador(jogador['nome'], jogador['hp'], jogador['atk'], jogador['def'], jogador['mag'], jogador['def_mag'],
-                  jogador['speed'], jogador['exp'], jogador['lv'], jogador['magia'], jogador['inventario'])
+pessoa = Jogador(dados['nome'], dados['hp'], dados['atk'], dados['mana'], dados['def'], dados['mag'], dados['def_mag'],
+                 dados['speed'], dados['exp'], dados['lv'], dados['magia'], dados['inventario'])
 
+"""
 inimigo = Inimigo(inimigo['nome'], inimigo['hp'], inimigo['atk'], inimigo['def'], inimigo['mag'], inimigo['def_mag'],
-                  inimigo['speed'], inimigo['lv'], inimigo['magia'], inimigo['desc'])
+                  inimigo['speed'], inimigo['lv'], inimigo['magia'], inimigo['desc'])"""
 
+testes = open('dados/jogador/teste.json', 'w')
 
-
-
-
-
+json.dump(pessoa, testes)

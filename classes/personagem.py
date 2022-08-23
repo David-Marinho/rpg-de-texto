@@ -1,15 +1,16 @@
 class Personagem:
-    def __init__(self, nome, hp, atk, defesa, mag, def_mag, speed, lv, lista_magia):
+    def __init__(self, nome, hp, atk, mana, defesa, mag, def_mag, speed, lv, magias):
         self.nome = nome
         self.hp = hp
         self.atk = atk
+        self.mana = mana
         self.defesa = defesa
         self.mag = mag
         self.def_mag = def_mag
         self.speed = speed
         self.lv = lv
         self.defendendo = False
-        self.lista_magia = lista_magia
+        self.magias = magias
         self.vivo = True
 
     def verificar_vida(self):
