@@ -6,6 +6,7 @@ class Armas:
         self.atk = None
         self.mag = None
         self.speed = None
+        self.efeito = None
 
     def criar_arma(self, nome):
         with open(f'../dados/equipamentos/armas/{nome}', 'r') as dados:
@@ -14,3 +15,4 @@ class Armas:
             self.atk = dados['atk']
             self.mag = dados['mag']
             self.speed = dados['speed']
+            self.efeito = dados['efeito']

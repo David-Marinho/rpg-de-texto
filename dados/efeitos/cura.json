@@ -2,5 +2,6 @@
   "nome": "cura",
   "tempo": 1,
   "status": "hp",
-  "efeito": 10
+  "caluclo": "porcentagem",
+  "valor": 10
 }

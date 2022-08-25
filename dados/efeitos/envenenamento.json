@@ -2,5 +2,6 @@
   "nome": "envenenamento",
   "tempo": 5,
   "status": "hp",
-  "efeito": -2
+  "calculo": "porcentagem",
+  "valor": -2
 }

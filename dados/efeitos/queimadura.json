@@ -2,5 +2,6 @@
   "nome": "queimadura",
   "tempo": 2,
   "status": "hp",
-  "efeito": -10
+  "calculo": "fixo",
+  "valor": -10
 }
