@@ -1,25 +1,16 @@
-import os
-from efeito import efeitos
 from json import load
 
 
-class armas:
-    def __init__(self, hp, atk, mag, defesa, speed, efeito):
-        self.hp = hp
-        self.atk = atk
-        self.mag = mag
-        self.defesa = defesa
-        self.speed = speed
-        self.efeito = efeito
+class Armas:
+    def __init__(self):
+        self.atk = None
+        self.mag = None
+        self.speed = None
 
-    """def definir_efeito(self, nome_efeito):
-        path = rf'{os.getcwd()}\dados\efeitos'
-        for file in os.listdir(path):
-            print()
-            if file == f'{nome_efeito}.json':
-                arq = load(open(rf'{path}\{file}', 'r'))
-                self.efeito = efeitos(arq['nome'], arq['tempo'], arq['status'], arq['efeito'])
-                break
+    def criar_arma(self, nome):
+        with open(f'../dados/equipamentos/armas/{nome}', 'r') as dados:
+            dados = load(dados)
 
-            else:
-                pass"""
+            self.atk = dados['atk']
+            self.mag = dados['mag']
+            self.speed = dados['speed']

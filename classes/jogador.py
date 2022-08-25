@@ -1,5 +1,7 @@
 from personagem import Personagem
 from random import randint
+from armas import Armas
+from armadura import Armaduras
 
 
 class Jogador(Personagem):
@@ -17,22 +19,9 @@ class Jogador(Personagem):
         self.Dspeed = 0
 
     def equipamentos(self):
-        global Arma, Armadura
-        if self.equip['arma'] == "espada comum":
-            from espada import Espada as Arma
-
-        elif self.equip['arma'] == 'oblivio':
-            from oblivio import Oblivio as Arma
-
-        #...
-
-        if self.equip['armadura'] == 'manto comum':
-            from manto_comum import Manto_comum as Armadura
-
-        #...
-
-        print(Arma)
-        print(Armadura)
+        arma = Armas()
+        armadura = Armaduras()
+        self.recarregar_Dstats(arma, armadura)
 
     @staticmethod
     def fugir():
@@ -54,10 +43,10 @@ class Jogador(Personagem):
         self.inventario[escolha]['quant'] -= 1
 
     def recarregar_Dstats(self, arma, armadura):
-        self.Datk = self.atk + arma.atk + armadura.atk
-        self.Ddef = self.defesa + arma.defesa + armadura.defesa
-        self.Dmag = self.mag + arma.mag + armadura.mag
-        self.Ddef_mag = self.def_mag + arma.def_mag + armadura.def_mag
+        self.Datk = self.atk + arma.atk
+        self.Ddef = self.defesa + armadura.defesa
+        self.Dmag = self.mag + arma.mag
+        self.Ddef_mag = self.def_mag + armadura.def_mag
         self.Dspeed = self.speed + arma.speed + armadura.speed
 
     def level_up(self):

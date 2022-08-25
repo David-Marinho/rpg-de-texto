@@ -1,8 +1,6 @@
 {
-    "hp": 0,
     "atk": 4,
     "magia": 0,
-    "def": 1,
     "speed": -2,
     "efeito": null
 }
