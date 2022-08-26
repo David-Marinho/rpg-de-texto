@@ -9,11 +9,6 @@
   "speed": 3,
   "exp": 0,
   "lv": 5,
-  "equip": [
-    {"arma": "espada comum"},
-    {"armadura": "manto comum"},
-    {"acessorio": "pingente"}
-  ],
   "magia": [
     {
       "nome": "bola de fogo", "dano": 20
@@ -27,5 +22,10 @@
     {"nome": "ether", "quant": 2},
     {"nome": "espada longa", "quant": 2},
     {"nome": "armadura de couro", "quant": 2}
+  ],
+  "equip": [
+    {"arma": "espada comum"},
+    {"armadura": "manto comum"},
+    {"acessorio": "pingente"}
   ]
 }

@@ -12,16 +12,23 @@ class Jogador(Personagem):
         self.equip = equip
         self.arma = None
         self.armadura = None
-        self.Datk = 0
-        self.Ddef = 0
-        self.Dmag = 0
-        self.Ddef_mag = 0
-        self.Dspeed = 0
 
     def equipamentos(self):
-        arma = Armas()
-        armadura = Armaduras()
-        self.recarregar_Dstats(arma, armadura)
+        self.arma = Armas()
+        self.armadura = Armaduras()
+        self.aplicar_equip()
+    
+    def aplicar_equip(self):
+        self.atk += self.arma.atk
+        self.mag += self.arma.mag
+        self.speed += self.arma.speed
+
+        self.hp += self.armadura.hp
+        self.defesa += self.armadura.defesa
+        self.def_mag += self.armadura.def_mag
+        self.speed += self.armadura.speed
+
+        self.recarregar_d_stats()
 
     @staticmethod
     def fugir():
@@ -42,12 +49,7 @@ class Jogador(Personagem):
         # chamar o efeito do item
         self.inventario[escolha]['quant'] -= 1
 
-    def recarregar_Dstats(self, arma, armadura):
-        self.Datk = self.atk + arma.atk
-        self.Ddef = self.defesa + armadura.defesa
-        self.Dmag = self.mag + arma.mag
-        self.Ddef_mag = self.def_mag + armadura.def_mag
-        self.Dspeed = self.speed + arma.speed + armadura.speed
+
 
     def level_up(self):
         if self.exp >= 100:

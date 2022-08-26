@@ -15,5 +15,6 @@
   "desc": "um boneco alvo aleatorio criado para testar o combate do RPG.",
   "drops": [
     {"nome": "item 1", "chance": 50}
-  ]
+  ],
+  "drop exp": 20
 }
