@@ -1,0 +1,38 @@
+{
+    "nome": "capital",
+    "desc": "você está nos portoes da capital",
+    "tem_inimigos": false,
+
+    "centro comercial": [
+        {
+            "loja equip": [
+                {
+                    "atendente": "nome",
+                    "itens": {
+                        "espada normal": 100,
+                        "espada grande": 150,
+                        "armadura leve": 120
+                    }
+                }
+            ],
+
+            "loja itens": [
+                {
+                    "atendente": "nome",
+                    "itens": {
+                        "poçao": 100,
+                        "ether": 120
+                    }
+                }
+            ]
+        }
+    ],
+
+    "distrito residencial": [
+
+    ],
+
+    "castelo": [
+
+    ]
+}

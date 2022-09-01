@@ -12,21 +12,29 @@ class Jogador(Personagem):
         self.equip = equip
         self.arma = None
         self.armadura = None
+        self.total_atk = 0
+        self.total_mag = 0
+        self.total_spd = 0
+        self.total_hp = 0
+        self.total_def = 0
+        self.total_def_mag = 0
+
+        self.equipamentos()
 
     def equipamentos(self):
-        self.arma = Armas()
-        self.armadura = Armaduras()
+        self.arma = Armas(self.equip['arma'])
+        self.armadura = Armaduras(self.equip['armadura'])
         self.aplicar_equip()
     
     def aplicar_equip(self):
-        self.atk += self.arma.atk
-        self.mag += self.arma.mag
-        self.speed += self.arma.speed
+        self.total_atk = self.atk + self.arma.atk
+        self.total_mag = self.mag + self.arma.mag
+        self.total_spd = self.speed + self.arma.speed
 
-        self.hp += self.armadura.hp
-        self.defesa += self.armadura.defesa
-        self.def_mag += self.armadura.def_mag
-        self.speed += self.armadura.speed
+        self.total_hp = self.hp + self.armadura.hp
+        self.total_def = self.defesa + self.armadura.defesa
+        self.total_def_mag = self.def_mag + self.armadura.def_mag
+        self.total_spd = self.speed + self.armadura.speed
 
         self.recarregar_d_stats()
 
