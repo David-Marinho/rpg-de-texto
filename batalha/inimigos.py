@@ -1,10 +1,10 @@
-from personagem import Personagem
+from .geral import Geral
 from random import randint, choice
 
 
-class Inimigo(Personagem):
-    def __init__(self, nome, hp, atk, defesa, mag, def_mag, speed, lv, magias, desc, drop, drop_exp):
-        super().__init__(nome, hp, atk, defesa, mag, def_mag, speed, lv, magias)
+class Inimigo(Geral):
+    def __init__(self, stats, lv, magias, desc, drop, drop_exp):
+        super().__init__(stats, lv, magias)
         self.desc = desc
         self.drops = drop
         self.drop_exp = drop_exp

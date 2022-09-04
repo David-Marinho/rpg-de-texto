@@ -1,12 +1,14 @@
 {
   "nome": "sla",
-  "hp": 10,
-  "atk": 5,
-  "mana": 100,
-  "def": 4,
-  "mag": 5,
-  "def_mag": 4,
-  "speed": 3,
+  "stats": {
+    "hp": 10, 
+    "atk": 5, 
+    "mana": 100, 
+    "def": 4, 
+    "mag": 5, 
+    "def_mag": 4, 
+    "speed": 3
+  },
   "exp": 0,
   "lv": 5,
   "magia": [

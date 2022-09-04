@@ -1,20 +1,19 @@
-import json
 from json import load
-from jogador import Jogador
-from inimigos import Inimigo
+from batalha import Jogador
+from batalha import Inimigo
 
-dados = load(open('dados/jogador/jogador.json', 'r'))
-inimigo = load(open('dados/monstros/generico.json', 'r'))
+"""def carrega_jogador():
+    dados = load(open('dados/jogador/jogador.json', 'r'))
 
-pessoa = Jogador(dados['nome'], dados['hp'], dados['atk'], dados['mana'], dados['def'], dados['mag'], dados['def_mag'],
-                 dados['speed'], dados['exp'], dados['lv'], dados['magia'], dados['inventario'], dados['equip'])
+    return Jogador(dados['nome'], dados['hp'], dados['atk'], dados['mana'], dados['def'], dados['mag'], dados['def_mag'], dados['speed'], dados['exp'], dados['lv'], dados['magia'], dados['inventario'], dados['equip'])
 
+def carrega_inimigo():
+    inimigo = load(open('dados/monstros/generico.json', 'r'))
 
-"""inimigo = Inimigo(inimigo['nome'], inimigo['hp'], inimigo['atk'], inimigo['def'], inimigo['mag'], inimigo['def_mag'],
-                  inimigo['speed'], inimigo['lv'], inimigo['magia'], inimigo['desc'])
+    return Inimigo(inimigo['nome'], inimigo['hp'], inimigo['atk'], inimigo['def'], inimigo['mag'], inimigo['def_mag'], inimigo['speed'], inimigo['lv'], inimigo['magia'], inimigo['desc'])
 
-testes = open('dados/jogador/teste.json', 'w')
+pessoa = carrega_jogador()
+inimigo = carrega_inimigo()
 
-json.dump(pessoa, testes)"""
+turno([pessoa, inimigo])"""
 
-print(pessoa.Datk)
