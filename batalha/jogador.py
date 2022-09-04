@@ -1,7 +1,6 @@
 from .geral import Geral
 from random import randint
-from .armas import Armas
-from .armadura import Armaduras
+
 
 
 class Jogador(Geral):
@@ -10,26 +9,10 @@ class Jogador(Geral):
         self.exp = exp
         self.inventario = inventario
         self.equip = equip
-        self.arma = None
-        self.armadura = None
+        
         
 
         self.equipar()
-
-    def equipar(self):
-        self.arma = Armas(self.equip['arma'])
-        self.armadura = Armaduras(self.equip['armadura'])
-
-        self.total['atk'] += self.arma.atk
-        self.total['mag'] += self.arma.mag
-        self.total['spd'] += self.arma.speed
-
-        self.total['hp'] += self.armadura.hp
-        self.total['def'] += self.armadura.defesa
-        self.total['def_mag'] += self.armadura.def_mag
-        self.total['spd'] += self.armadura.speed
-
-        self.recarregar_d_stats(self.total)
 
     @staticmethod
     def fugir():
@@ -60,3 +43,5 @@ class Jogador(Geral):
             self.stats['def_mag'] += 2
             self.stats['speed'] += 2
             self.stats['hp'] += 10
+
+            self.recarregar_stats()

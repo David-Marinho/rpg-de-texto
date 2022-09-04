@@ -8,7 +8,7 @@ class Armas:
         self.speed = None
         self.efeito = None
 
-    def criar_arma(self, nome):
+    def criar_arma(self, nome, alvo):
         with open(f'../dados/equipamentos/armas/{nome}', 'r') as dados:
             dados = load(dados)
 
@@ -16,3 +16,9 @@ class Armas:
             self.mag = dados['mag']
             self.speed = dados['speed']
             self.efeito = dados['efeito']
+            self.aplicar_stats(alvo)
+
+    def aplicar_stats(self, alvo):
+        alvo.total['atk'] = self.atk + alvo.stats['atk']
+        alvo.total['mag'] = self.mag + alvo.stats['def']
+        alvo.total['speed'] = self.speed + alvo.stats['speed']

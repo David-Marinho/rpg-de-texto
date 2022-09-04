@@ -1,3 +1,6 @@
+from .armas import Armas
+from .armadura import Armaduras
+
 class Geral:
     def __init__(self, nome, stats:dict, lv, magias):
         self.nome = nome
@@ -9,11 +12,18 @@ class Geral:
                       'def_mag': self.stats['def_mag'], 
                       'speed': self.stats['speed']
                       }
+        self.lv = lv
         self.defendendo = False
         self.magias = magias
         self.vivo = True
+        self.arma = None
+        self.armadura = None
         self.lista_efeitos = []
 
+    def equipar(self):
+        self.arma = Armas(self.equip['arma'])
+        self.armadura = Armaduras(self.equip['armadura'])
+        self.recarregar_stats()
 
     def atacar(self, alvo_def):
         return self.atk - alvo_def
@@ -25,12 +35,15 @@ class Geral:
         if self.hp == 0:
             self.vivo = False
 
-    def recarregar_d_stats(self, base):
-        self.d_atk = base['atk']
-        self.d_def = base['def']
-        self.d_mag = base['mag']
-        self.d_def_mag = base['def_mag']
-        self.d_speed = base['speed']  
+    def recarregar_stats(self):
+        self.arma.aplicar_stats()
+        self.armadura.aplicar_stats()
+
+        self.d_atk = self.total['atk']
+        self.d_def = self.total['def']
+        self.d_mag = self.total['mag']
+        self.d_def_mag = self.total['def_mag']
+        self.d_speed = self.total['speed']  
 
     # funçao que chama outras funçoes no fim do turno
     def finalizar_turno(self):
