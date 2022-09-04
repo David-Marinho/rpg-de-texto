@@ -8,7 +8,7 @@ class Jogador(Geral):
         super().__init__(stats, total, lv, magias)
         self.exp = exp
         self.inventario = inventario
-        self.equip = equip
+        
         
         
 

@@ -2,7 +2,7 @@ from .armas import Armas
 from .armadura import Armaduras
 
 class Geral:
-    def __init__(self, nome, stats:dict, lv, magias):
+    def __init__(self, nome, stats:dict, lv, equip, magias):
         self.nome = nome
         self.stats = stats
         self.total = {
@@ -16,6 +16,7 @@ class Geral:
         self.defendendo = False
         self.magias = magias
         self.vivo = True
+        self.equip = equip
         self.arma = None
         self.armadura = None
         self.lista_efeitos = []
