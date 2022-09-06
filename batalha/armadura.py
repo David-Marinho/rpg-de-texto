@@ -21,7 +21,6 @@ class Armaduras:
             efeito = dados['efeito']
             
         armadura = Armaduras(hp, defesa, def_mag, speed, efeito)
-        armadura.aplicar_stats(alvo)
         return armadura
 
     def aplicar_stats(self, alvo):

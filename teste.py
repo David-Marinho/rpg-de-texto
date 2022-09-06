@@ -11,7 +11,7 @@ def carrega_jogador():
 def carrega_inimigo():
     inimigo = load(open('dados/monstros/generico.json', 'r'))
 
-    return Inimigo(inimigo['nome'], inimigo['stats'], inimigo['lv'], inimigo['magias'], inimigo['desc'], inimigo['drops'], inimigo['drop exp'])
+    return Inimigo(inimigo['nome'], inimigo['stats'], inimigo['lv'],inimigo['equip'], inimigo['magia'], inimigo['desc'], inimigo['drops'], inimigo['drop exp'])
 
 pessoa = carrega_jogador()
 inimigo = carrega_inimigo()

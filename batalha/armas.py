@@ -19,7 +19,6 @@ class Armas:
             efeito = dados['efeito']
 
         arma = Armas(atk, mag, speed, efeito)
-        arma.aplicar_stats(alvo)
         return arma
 
     def aplicar_stats(self, alvo):

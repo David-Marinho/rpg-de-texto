@@ -1,8 +1,15 @@
 class pessoa:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
 
 
-pessoa1 = pessoa()
+class aluno(pessoa):
+    def __init__(self, curso, nome, idade):
+        super().__init__(nome, idade)
+        self.curso = curso
 
-print(type(pessoa1))
+
+aluno1 = aluno('cco', 'joao', 20)
+
+print(aluno1.nome)

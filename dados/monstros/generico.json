@@ -15,6 +15,11 @@
       "nome": "bola de fogo", "dano": 20
     }
   ],
+  "equip": {
+    "arma": "espada-comum",
+    "armadura": "manto-comum",
+    "acessorio": "pingente"
+  },
   "desc": "um boneco alvo aleatorio criado para testar o combate do RPG.",
   "drops": [
     {"nome": "item 1", "chance": 50}

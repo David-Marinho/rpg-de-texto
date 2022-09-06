@@ -1,13 +1,12 @@
-def turno(personagens: list()):
+def turno(lista):
     continua = True
     prioridade = dict()
-    for classe in personagens:
-        prioridade[classe] = classe.speed
-    personagens = sorted(personagens.key(), reverse=True)
+    for classe in lista:
+        prioridade[classe] = classe.stats['speed']
 
     while continua:
-        for personagem in personagens.keys():
-            print(f'turno de {personagem}')
+        for personagem in sorted(prioridade, key=prioridade.get, reverse=True):
+            print(f'turno de {personagem.nome}')
 
             input('digite algo para continuar >>> ')
         

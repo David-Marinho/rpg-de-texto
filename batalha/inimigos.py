@@ -3,8 +3,8 @@ from random import randint, choice
 
 
 class Inimigo(Geral):
-    def __init__(self, nome, stats, lv, magias, desc, drop, drop_exp):
-        super().__init__(nome, stats, lv, magias)
+    def __init__(self, nome, stats, lv, magia, equip, desc, drop, drop_exp):
+        super().__init__(nome, stats, lv, magia, equip)
         self.desc = desc
         self.drops = drop
         self.drop_exp = drop_exp
@@ -18,7 +18,7 @@ class Inimigo(Geral):
         elif numero == 2:
             self.defender()
     
-    def enviar_drops(self):
+    """def enviar_drops(self):
         entrega = list()
         aleatorio = True
 
@@ -31,6 +31,6 @@ class Inimigo(Geral):
 
             aleatorio = choice([True, False])
         
-        return entrega
+        return entrega"""
 
         
