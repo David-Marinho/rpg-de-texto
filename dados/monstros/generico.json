@@ -1,12 +1,15 @@
 {
   "nome": "inimigo 1",
-  "hp": 8,
-  "atk": 4,
-  "def": 2,
-  "mag": 3,
-  "def_mag": 1,
-  "speed": 5,
-  "lv": 3,
+  "stats": {
+    "hp": 8,
+    "atk": 4,
+    "def": 2,
+    "mag": 3,
+    "def_mag": 1,
+    "speed": 5,
+    "lv": 3
+  },
+  "lv": 4, 
   "magia": [
     {
       "nome": "bola de fogo", "dano": 20

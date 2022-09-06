@@ -19,11 +19,14 @@ class Geral:
         self.equip = equip
         self.arma = None
         self.armadura = None
-        self.lista_efeitos = []
+        self.lista_efeitos = dict()
+        self.total = dict()
+        print(self.equip)
+        print(self.magias)
 
     def equipar(self):
-        self.arma = Armas(self.equip['arma'])
-        self.armadura = Armaduras(self.equip['armadura'])
+        self.arma = Armas.criar_arma(self.equip['arma'], self)
+        self.armadura = Armaduras.criar_armadura(self.equip['armadura'], self)
         self.recarregar_stats()
 
     def atacar(self, alvo_def):
@@ -37,8 +40,10 @@ class Geral:
             self.vivo = False
 
     def recarregar_stats(self):
-        self.arma.aplicar_stats()
-        self.armadura.aplicar_stats()
+        print(type(self.arma))
+        print(type(self.armadura))
+        self.arma.aplicar_stats(self)
+        self.armadura.aplicar_stats(self)
 
         self.d_atk = self.total['atk']
         self.d_def = self.total['def']

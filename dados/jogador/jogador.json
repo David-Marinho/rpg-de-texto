@@ -25,9 +25,9 @@
     {"nome": "espada longa", "quant": 2},
     {"nome": "armadura de couro", "quant": 2}
   ],
-  "equip": [
-    {"arma": "espada comum"},
-    {"armadura": "manto comum"},
-    {"acessorio": "pingente"}
-  ]
+  "equip": {
+    "arma": "espada-comum",
+    "armadura": "manto-comum",
+    "acessorio": "pingente"
+  }
 }

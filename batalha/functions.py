@@ -1,12 +1,9 @@
-def ordem(personagens):
-    return sorted(personagens.key(), reverse=True)
-
 def turno(personagens: list()):
     continua = True
     prioridade = dict()
     for classe in personagens:
         prioridade[classe] = classe.speed
-    personagens = ordem(prioridade)
+    personagens = sorted(personagens.key(), reverse=True)
 
     while continua:
         for personagem in personagens.keys():

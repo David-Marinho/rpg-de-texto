@@ -2,20 +2,27 @@ from json import load
 
 
 class Armaduras:
-    def __init__(self):
-        self.defesa = None
-        self.def_mag = None
-        self.speed = None
+    def __init__(self, hp, defesa, def_mag, speed, efeito):
+        self.hp = hp
+        self.defesa = defesa
+        self.def_mag = def_mag
+        self.speed = speed
+        self.efeito = efeito
 
-    def criar_armadura(self, nome, alvo):
-        with open(f'../dados/equipamentos/armaduras/{nome}', 'r') as dados:
+    @staticmethod
+    def criar_armadura(nome, alvo):
+        with open(f'dados/equipamentos/armaduras/{nome}.json', 'r') as dados:
             dados = load(dados)
 
-            self.hp = dados['hp']
-            self.defesa = dados['defesa']
-            self.def_mag = dados['def_mag']
-            self.speed = dados['speed']
-            self.aplicar_stats(alvo)
+            hp = dados['hp']
+            defesa = dados['defesa']
+            def_mag = dados['def_mag']
+            speed = dados['speed']
+            efeito = dados['efeito']
+            
+        armadura = Armaduras(hp, defesa, def_mag, speed, efeito)
+        armadura.aplicar_stats(alvo)
+        return armadura
 
     def aplicar_stats(self, alvo):
         alvo.total['hp'] = self.hp + alvo.stats['hp']

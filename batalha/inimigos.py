@@ -3,8 +3,8 @@ from random import randint, choice
 
 
 class Inimigo(Geral):
-    def __init__(self, stats, lv, magias, desc, drop, drop_exp):
-        super().__init__(stats, lv, magias)
+    def __init__(self, nome, stats, lv, magias, desc, drop, drop_exp):
+        super().__init__(nome, stats, lv, magias)
         self.desc = desc
         self.drops = drop
         self.drop_exp = drop_exp

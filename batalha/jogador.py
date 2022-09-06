@@ -4,14 +4,11 @@ from random import randint
 
 
 class Jogador(Geral):
-    def __init__(self, stats, total, lv, magias, exp, inventario, equip):
-        super().__init__(stats, total, lv, magias)
+    def __init__(self, nome, stats, lv, magias, exp, inventario, equip):
+        super().__init__(nome, stats, lv, magias, equip)
         self.exp = exp
         self.inventario = inventario
         
-        
-        
-
         self.equipar()
 
     @staticmethod
