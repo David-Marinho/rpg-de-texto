@@ -29,12 +29,20 @@ class Geral:
         self.armadura = Armaduras.criar_armadura(self.equip['armadura'], self)
 
 
-    def atacar(self, alvo_def):
-        return self.atk - alvo_def
+    def atacar(self, alvo):
+        if alvo.defendendo:
+            dano = (self.stats['atk'] - alvo.stats['def']) * 0.75
+
+        else:
+            dano = self.stats['atk'] - alvo.stats['def']
+        
+        print(f'esse ataque daria: {dano} e deixaria o alvo com {alvo.stats["hp"] - dano}')
+        return dano
     
 
     def defender(self):
         self.defendendo = True
+        print('se defendeu')
 
 
     def verificar_vida(self):
@@ -59,3 +67,12 @@ class Geral:
     # funçao que chama outras funçoes no fim do turno
     def finalizar_turno(self):
         self.verificar_vida()
+    
+
+    def iniciar_turno(self):
+        self.defendendo = False
+
+    
+    def verificar_stats(self):
+        for stat, valor in self.stats.items():
+            print(f'{stat}: {valor}')

@@ -16,5 +16,12 @@ def carrega_inimigo():
 pessoa = carrega_jogador()
 inimigo = carrega_inimigo()
 
+print(pessoa)
+print(type(pessoa))
+print(type(inimigo))
+
+if type(pessoa) is Jogador:
+    print('é um jogador')
+
 functions.turno([pessoa, inimigo])
 

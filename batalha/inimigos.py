@@ -9,11 +9,11 @@ class Inimigo(Geral):
         self.drops = drop
         self.drop_exp = drop_exp
 
-    def movimendo(self, alvo):
+    def movimento(self, alvos):
         numero = randint(1, 2)
 
         if numero == 1:
-            self.atacar(alvo)
+            self.atacar(choice(alvos))
 
         elif numero == 2:
             self.defender()

@@ -1,15 +1,9 @@
-class pessoa:
-    def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
+import random
 
+lista = list()
 
-class aluno(pessoa):
-    def __init__(self, curso, nome, idade):
-        super().__init__(nome, idade)
-        self.curso = curso
+lista.append(1)
+lista.append(2)
+lista.append(3)
 
-
-aluno1 = aluno('cco', 'joao', 20)
-
-print(aluno1.nome)
+print(random.choice(lista))
