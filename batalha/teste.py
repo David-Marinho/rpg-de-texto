@@ -1,9 +1,5 @@
-import random
+people = {"Jim": 3, "Jack": 2, "Jane": 4, "Jill": 1}
 
-lista = list()
 
-lista.append(1)
-lista.append(2)
-lista.append(3)
-
-print(random.choice(lista))
+coisa = sorted(people.items(), key=lambda item: item[1])
+print(coisa[1][1])

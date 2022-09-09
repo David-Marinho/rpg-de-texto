@@ -3,20 +3,33 @@ from random import randint, choice
 
 
 class Inimigo(Geral):
-    def __init__(self, nome, stats, lv, magia, equip, desc, drop, drop_exp):
+    def __init__(self, nome, stats, classe, lv, magia, equip, desc, drop, drop_exp):
         super().__init__(nome, stats, lv, magia, equip)
+        self.classe = classe
         self.desc = desc
         self.drops = drop
         self.drop_exp = drop_exp
 
     def movimento(self, alvos):
-        numero = randint(1, 2)
+        if self.classe == 'querreiro':
+            personagens = dict()
+            selecionados = list()
+            
+            for alvo in alvos:
+                personagens[alvo] = alvo.stats['hp']
+            
+            personagens = list(sorted(personagens, key=lambda item: item[1]))
 
-        if numero == 1:
-            self.atacar(choice(alvos))
+            menor_hp = personagens[0][1]
 
-        elif numero == 2:
-            self.defender()
+            for alvo in personagens:
+                if alvo[1] == menor_hp:
+                    selecionados.append(alvo[0])
+            #comparar a defesa do alvo
+            
+
+
+
     
     """def enviar_drops(self):
         entrega = list()

@@ -1,5 +1,6 @@
 {
   "nome": "inimigo 1",
+  "classe": "querreiro",
   "stats": {
     "hp": 8,
     "atk": 4,
