@@ -13,18 +13,15 @@ class Inimigo(Geral):
     def movimento(self, alvos):
         if self.classe == 'querreiro':
             personagens = dict()
-            selecionados = list()
-            
+            selecionados = [{'...': 9999}]
+
             for alvo in alvos:
-                personagens[alvo] = alvo.stats['hp']
-            
-            personagens = list(sorted(personagens, key=lambda item: item[1]))
-
-            menor_hp = personagens[0][1]
-
-            for alvo in personagens:
-                if alvo[1] == menor_hp:
-                    selecionados.append(alvo[0])
+                if alvo.stats['hp'] < selecionados[0][1]:
+                    selecionados.clear()
+                    selecionados.append([alvo, alvo.stats['hp']])
+                    
+                elif alvo.stats['hp'] == selecionados[0][1]:
+                    selecionados.append(alvo, alvo.stats['hp'])
             #comparar a defesa do alvo
             
 
